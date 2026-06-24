@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_ga4_events
+    columns:
+      - name: user_pseudo_id
+        tests:
+          - not_null
+      - name: event_name
+        tests:
+          - not_null
+
+  - name: mart_sessions
+    columns:
+      - name: session_pk
+        tests:
+          - unique
+          - not_null

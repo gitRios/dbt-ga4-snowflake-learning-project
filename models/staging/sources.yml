@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ga4
+    database: GA4_LEARNING
+    schema: PUBLIC
+    tables:
+      - name: raw_ga4_events
