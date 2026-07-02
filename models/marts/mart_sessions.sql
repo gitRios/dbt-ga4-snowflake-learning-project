@@ -1,5 +1,5 @@
 select
-    concat(user_pseudo_id, '-', session_id) as session_pk,
+    {{ dbt_utils.generate_surrogate_key(['session_id', 'user_pseudo_id']) }} as session_pk,
     session_id,
     user_pseudo_id,
     min(event_date)              as session_date,
